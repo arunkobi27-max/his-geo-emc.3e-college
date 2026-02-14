@@ -3,36 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cours de 3ème - Accueil</title>
+    <title>Espace Révisions 3ème</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background: #f0f2f5; text-align: center; }
-        header { background: #2c3e50; color: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; }
-        
-        .menu-container { display: grid; grid-template-columns: 1fr; gap: 20px; }
-        
-        .btn-matiere { 
-            display: block; padding: 40px; border-radius: 15px; text-decoration: none; color: white; 
-            font-size: 1.5rem; font-weight: bold; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        :root {
+            --histoire: #c0392b;
+            --geo: #27ae60;
+            --emc: #f39c12;
         }
-        .btn-matiere:hover { transform: scale(1.02); }
 
-        .hist { background: #e74c3c; } /* Rouge Histoire */
-        .geo { background: #27ae60; }  /* Vert Géo */
-        .emc { background: #f1c40f; color: #2c3e50; } /* Jaune EMC */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; padding: 0; background: #f4f7f6; color: #333; 
+        }
+
+        header { 
+            background: linear-gradient(135deg, #2c3e50, #4ca1af); 
+            color: white; padding: 60px 20px; text-align: center; 
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+        header p { opacity: 0.9; font-size: 1.1rem; margin-top: 10px; }
+
+        .container { 
+            max-width: 1000px; margin: -40px auto 50px; padding: 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white; border-radius: 20px; overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease; text-decoration: none;
+            display: flex; flex-direction: column; text-align: center;
+            border-bottom: 8px solid transparent;
+        }
+
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+
+        .card-icon { font-size: 50px; padding: 40px 0 20px; }
+        .card-title { font-size: 1.6rem; font-weight: bold; margin: 0; }
+        .card-desc { padding: 15px 25px 30px; color: #7f8c8d; font-size: 0.95rem; }
+
+        /* Couleurs spécifiques par matière */
+        .histoire { border-color: var(--histoire); color: var(--histoire); }
+        .geo { border-color: var(--geo); color: var(--geo); }
+        .emc { border-color: var(--emc); color: var(--emc); }
+
+        footer { text-align: center; padding: 40px; color: #95a5a6; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Espace Pédagogique 3ème</h1>
-    <p>Sélectionnez une discipline pour accéder aux thèmes</p>
+    <h1>ESPACE RÉVISIONS 3<sup>ÈME</sup></h1>
+    <p>Tout pour réussir ton Brevet en Histoire, Géo et EMC</p>
 </header>
 
-<div class="menu-container">
-    <a href="histoire/index.html" class="btn-matiere hist">📜 HISTOIRE</a>
-    <a href="geographie/index.html" class="btn-matiere geo">🌍 GÉOGRAPHIE</a>
-    <a href="emc/index.html" class="btn-matiere emc">⚖️ EMC</a>
+<div class="container">
+    <a href="histoire/index.html" class="card histoire">
+        <div class="card-icon">📜</div>
+        <h2 class="card-title">HISTOIRE</h2>
+        <div class="card-desc">Le monde de 1914 à nos jours, les guerres mondiales et la France.</div>
+    </a>
+
+    <a href="geographie/index.html" class="card geo">
+        <div class="card-icon">🌍</div>
+        <h2 class="card-title">GÉOGRAPHIE</h2>
+        <div class="card-desc">Dynamiques territoriales, aménagement et Union européenne.</div>
+    </a>
+
+    <a href="emc/index.html" class="card emc">
+        <div class="card-icon">⚖️</div>
+        <h2 class="card-title">EMC</h2>
+        <div class="card-desc">Valeurs de la République, citoyenneté et défense nationale.</div>
+    </a>
 </div>
+
+<footer>
+    <p>© 2026 - Plateforme Pédagogique 3ème <br> Accès rapide et révisions simplifiées</p>
+</footer>
 
 </body>
 </html>
