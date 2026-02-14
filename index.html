@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de 3ème - Accueil</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background: #f0f2f5; text-align: center; }
+        header { background: #2c3e50; color: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; }
+        
+        .menu-container { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        
+        .btn-matiere { 
+            display: block; padding: 40px; border-radius: 15px; text-decoration: none; color: white; 
+            font-size: 1.5rem; font-weight: bold; transition: transform 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .btn-matiere:hover { transform: scale(1.02); }
+
+        .hist { background: #e74c3c; } /* Rouge Histoire */
+        .geo { background: #27ae60; }  /* Vert Géo */
+        .emc { background: #f1c40f; color: #2c3e50; } /* Jaune EMC */
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Espace Pédagogique 3ème</h1>
+    <p>Sélectionnez une discipline pour accéder aux thèmes</p>
+</header>
+
+<div class="menu-container">
+    <a href="histoire/index.html" class="btn-matiere hist">📜 HISTOIRE</a>
+    <a href="geographie/index.html" class="btn-matiere geo">🌍 GÉOGRAPHIE</a>
+    <a href="emc/index.html" class="btn-matiere emc">⚖️ EMC</a>
+</div>
+
+</body>
+</html>
